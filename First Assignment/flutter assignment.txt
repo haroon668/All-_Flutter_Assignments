@@ -1,0 +1,313 @@
+							Dart Assignment 1
+Q.1: Create two integer variables length and breadth and assign values then check if they are square values or rectangle values.
+ie: if both values are equal then it's square otherwise rectangle.
+
+//Code
+void main() {
+ int length = 4;
+ int breath = 4;
+  if (length == breath){
+    print ("It's a Square");
+  }
+  else{
+      print("It's a Rectangle");
+    }
+  }
+
+//Console Result  
+
+It's a Square
+
+//Q.2: Take two variables and store age then using if/else condition to determine oldest and youngest among them.
+
+//Code
+void main (){
+  int aqib = 22;
+  int saqib = 18;
+  
+  if (aqib>saqib){
+    print("Aqib is oldest");
+  }
+  else{
+    print ("Saqib is youngest");
+  }
+}
+
+//Console Result 
+
+Aqib is oldest
+
+// Q.3: A student will not be allowed to sit in exam if his/her attendance is less than 75%. Create integer variables and assign value:
+// Number of classes held = 16,
+// Number of classes attended = 10,
+// and print percentage of class attended.
+// Is student is allowed to sit in exam or not?
+
+//Code
+void main (){
+  int no_of_classes_held= 16;
+  int no_of_classes_attend= 10;
+  num attendance_per = (no_of_classes_attend/no_of_classes_held)*100;
+  print ("$attendance_per %");
+   if (attendance_per<75){
+     print ("Student is not allow to sit in the Exam");
+   }
+  else {
+    print("Student is allowed to sit in the Exam");
+  }
+}
+
+//Console Result 
+62.5 %
+Student is not allow to sit in the Exam
+
+Q.4: Create integer variable assign any year to it and check if a year is leap year or not.
+If a year is divisible by 4 then it is leap year but if the year is century year like 2000, 1900, 2100 then it must be divisible by 400.
+i.e: Use % ( modulus ) operator.
+
+//Code
+void main(){
+  int year = 2024;
+  if (year%4==0 && year%100 !=0 ){
+  print("$year a leap year");
+  }
+  
+  else if (year%400==0 && year%100 ==0 ){
+  print("$year a leap year");
+  }
+  
+  else {
+    print ("$year not a Leap year");
+  }
+}
+//Result
+
+2024 a leap year
+
+
+// Q.5  Write a program to read temperature in centigrade and display a suitable message according to temperature:
+// You have num variable temperature = 42;
+// Now print the message according to temperature:
+// temp < 0 then Freezing weather
+// temp 0-10 then Very Cold weather
+// temp 10-20 then Cold weather
+// temp 20-30 then Normal in Temp
+// temp 30-40 then Its Hot
+// temp >=40 then Its Very Hot
+
+//Code
+void main (){
+  num temp = 42;
+  print("Today's Temperature $temp");
+  if (temp<=0){
+    print("Freezing weather");
+    }
+    else if(temp>0 && temp<=10){
+      print ("then Very Cold weather");
+      
+    }
+    
+  else if(temp>10 && temp<=20){
+      print ("then Very Cold weather");
+      
+    }
+    
+      
+  else if(temp>20 && temp<=30){
+      print ("Normal Temperature");
+      
+    }
+  else if(temp>30 && temp<=40){
+      print ("It's a Hot Day");
+      
+    }
+  else if(temp>40){
+      print ("It's a Very Hot Day");
+      
+    }
+}
+
+//Console Result 
+
+Today's Temperature 42
+It's a Very Hot Day
+
+
+// Q.6: Write a program to check whether an alphabet is a vowel or consonant.
+
+//Code
+
+void main (){
+  
+  String alphabet = "i";
+  
+  if (alphabet== "a" || alphabet== "e" ||  alphabet== "i" ||  alphabet== "o" || alphabet== "u") {
+    print ("$alphabet It's a vowel");
+  }
+  else {
+    print ("$alphabet It's a Constant");
+  }
+}
+
+//Console Result 
+
+i It's a vowel
+
+// Q.7: Write a program to calculate and print the Electricity bill of a given customer. Create variable for customer id, name, unit consumed by the user, bill_amount and print the total amount the customer needs to pay. The charge are as follow :
+
+// Unit    Charge/unit
+// upto 199    @1.20
+// 200 and above but less than 400    @1.50
+// 400 and above but less than 600    @1.80
+// 600 and above             @2.00;
+
+// Test Data :
+// id: 1001
+// name: James
+// units: 800
+// Expected Output :
+// Customer IDNO :1001
+// Customer Name :James
+// unit Consumed :800
+// Amount Charges @Rs. 2.00 per unit : 1600.00
+// Net Bill Amount : 1600.00
+
+//Code
+ void main(){
+ int cust_id = 1001;
+ String cust_name = "James";
+ num consumed_units = 400;
+ print (cust_id);
+ print (cust_name);
+ print (consumed_units);
+ 
+  if (consumed_units<=199){
+    num amount = consumed_units*1.20;
+    print ("Bill Net Amount is: ${amount.toStringAsFixed(2)} /-");
+    }
+  else if (consumed_units>=200 && consumed_units<400) {
+     num  amount = consumed_units*1.50;
+    print ("Bill Net Amount is: ${amount.toStringAsFixed(2)} /-");
+  }
+
+  else if (consumed_units>=400 && consumed_units<600) {
+     num amount = consumed_units*1.80;
+    print ("Bill Net Amount is: ${amount.toStringAsFixed(2)} /-");
+  }
+
+  else if(consumed_units>=600) {
+     num amount = consumed_units*2.00;
+    print ("Bill Net Amount is: ${amount.toStringAsFixed(2)} /-");
+  }
+   
+   else {
+     print ("Amount not reqyuired");
+   }
+   
+  
+}
+
+// RESULT
+
+1001
+James
+800
+Bill Net Amount is: 1600.00 /-
+
+
+Q8: Create a marksheet using operators of at least 5 subjects and output should have Student Name, Student Roll Number, Class, Percentage, Grade Obtained etc.
+// i.e: Percentage should be rounded upto 2 decimal places only.
+
+//Code
+void main()
+{
+  String name = "Muhammad Haroon";
+  int roll_no = 44;
+  String cls = "Grade 8th";
+  print ("Student name: $name");
+  print ("Student Roll_No: $roll_no");
+  print ("Student Class: $cls");
+  
+  //allot marks out of 100
+  num urdu = 80;
+  num english = 75;
+  num islamiat = 95;
+  num computer_Science = 99;
+  num maths = 100;
+  int total_marks = 500;
+ 
+  num  obtained_marks = urdu+english+islamiat+computer_Science+maths;
+  num percentage= (obtained_marks/total_marks)*100;
+  
+  print ("Obtained_Marks $obtained_marks");
+  print ("Percentage ${percentage.toStringAsFixed(2)}");
+  
+  if (percentage>=80){
+    print ("Get A-One Grade");
+  }
+  else if (percentage>=70 && percentage<80 ){
+    print ("Get A Grade");
+  }
+  else if (percentage>=60 && percentage<70 ){
+   print ("Get B Grade");
+  }  
+    else if (percentage>=50 && percentage<60 ){
+   print ("Get C Grade");
+  }  
+  
+      else if (percentage>=40 && percentage<50 ){
+   print ("Get D Grade");
+}
+  
+     else if (percentage>=33 && percentage<40 ){
+   print ("Get E Grade");
+} 
+     else if (percentage<33){
+   print ("Failed");
+}
+}
+
+//Result
+
+Student name: Muhammad Haroon
+Student Roll_No: 44
+Student Class: Grade 8th
+Obtained_Marks 449
+Percentage 89.80
+Get A-One Grade
+
+Q11: Write a program to calculate root of any number.
+i.e: √y = y½
+
+//Code
+import 'dart:math';
+
+void main() {
+  int a = 16;
+  print("Square root of the Number $sqrt(a)");
+}
+
+
+//Result
+
+Square root of the Number 4
+
+//Code
+
+
+
+Q12: Write a program to convert Celsius  to Fahrenheit   .
+i.e: Temperature in degrees Fahrenheit (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32
+
+void main (){
+  
+  double temperature_in_Celcis = 40;
+  print ("Temperature in Celcius $temperature_in_Celcis C");
+  double temperature_in_Fahrenheit= (temperature_in_Celcis*9/5)+32;
+  print ("Temperature in Fahrenheit $temperature_in_Fahrenheit");
+  
+}
+
+//Result
+Temperature in Celcius 40 C
+Temperature in Fahrenheit 104
