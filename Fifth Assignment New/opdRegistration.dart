@@ -49,9 +49,9 @@ opdregistration() {
     print("Skin (Mon, Tue, Wed, Thur, Fri)");
   }
 
-  stdout.write("Date for Appointment: dd/mm/yy : ");
-  String Appointmentdate = stdin.readLineSync()!;
-  usercredentials["appointment_date"] = Appointmentdate;
+  stdout.write("Date for Appointment: dd/mm/yy ");
+  String appointmentdate = stdin.readLineSync()!;
+  usercredentials["Appointment_date"] = appointmentdate;
 
   // **************************************************************
 
@@ -59,7 +59,7 @@ opdregistration() {
   print("Patient Details");
   print("**************************************************************");
 
-  stdout.write("Patient Name: ");
+  stdout.write("Patient Name ");
   String patient_Name = stdin.readLineSync()!;
   usercredentials["Patient_Name"] = patient_Name;
   print("Select Gender by enter the number");
@@ -78,16 +78,16 @@ opdregistration() {
     usercredentials["Gender"] = "Transgender";
     print("Transgender");
   }
-  stdout.write("Address: ");
+  stdout.write("Address  ");
   String address = stdin.readLineSync()!;
   usercredentials["Address"] = address;
-  stdout.write("Patient CNIC: xxxxx-xxxxxxx-x ");
+  stdout.write("Patient CNIC: xxxxx-xxxxxxx-x  ");
   String cnic = stdin.readLineSync()!;
   usercredentials["CNIC"] = cnic;
-  stdout.write("Patient Contact No: xxxx-xxxxxxx ");
+  stdout.write("Patient Contact No: xxxx-xxxxxxx  ");
   String contact_no = stdin.readLineSync()!;
   usercredentials["Contact_No"] = contact_no;
-  stdout.write("Enter Patient Complaints/Problems: ");
+  stdout.write("Enter Patient Complaints/Problems  ");
   String patient_problem = stdin.readLineSync()!;
   usercredentials["Patient_Problem"] = patient_problem;
   usersList.add(usercredentials);
@@ -95,7 +95,7 @@ opdregistration() {
   print("");
   print("");
   print("********************************************************");
-  print("PATIENT OPD REGISTRATION SLIP");
+  print("PATIENT ONLINE REGISTRATION SLIP");
   print("********************************************************");
   print("Patient Name: ${usercredentials["Patient_Name"]}");
   print("Gender: ${usercredentials["Gender"]}");
@@ -106,7 +106,6 @@ opdregistration() {
   print("");
   print("");
   print("");
-  stdout.write("Notice:");
   print(
       "Please bring this Online OPD Registration Slip with you on the Reception");
 }

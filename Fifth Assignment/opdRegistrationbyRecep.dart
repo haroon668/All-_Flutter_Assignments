@@ -3,13 +3,17 @@ import 'dart:io';
 List usersList = [];
 opdregistration() {
   Map<String, dynamic> usercredentials = {};
-  print("ONLINE OPD REGISTRATION SYSTEM");
+  print("******************************************************************");
+  print("               ONLINE OPD REGISTRATION SYSTEM                     ");
+  print("******************************************************************");
+  print("");
 
   print("Select the hospital by enter number");
   print("Enter 1 to Select Hospital Nehal");
   print("Enter 2 to Select Hospital Al-Mumtaz");
   print("Enter 3 to Select Hospital Atia");
   print("Enter 4 to Select Hospital Al-Khidmat");
+  print("");
 
   String hospital_name = stdin.readLineSync()!;
   usercredentials["Hospital_Name"] = hospital_name;

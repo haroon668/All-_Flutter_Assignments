@@ -1,18 +1,12 @@
 import 'dart:io';
 import 'opdRegistration.dart';
 
-List usersList = [];
 void main() {
   print("******************************************************************");
   print("***********Welcome to Online OPD Registration App************");
   print("******************************************************************");
 
   bool islogin = true;
-
-  // Map<String, String> recepAndAdmin = {
-  //   "opdreceptionist@example.com": "Opd@1",
-  //   "admin@example.com": "Admin@123",
-  // };
 
   Map<String, String> usercredentials = {
     "username1@example.com": "Password1",
@@ -31,19 +25,23 @@ void main() {
     if (usercredentials.containsKey(email) &&
         usercredentials[email] == password) {
       if (email == "opdreceptionist@example.com") {
-        print("You are login Succesfully");
         print("Welcome Receptionist");
+        print("You are login Succesfully");
         islogin = false;
-        print("           Do you want to register the user for OPD           ");
+        print("do you want to register the user for OPD");
         print("yes");
         print("No");
-        stdout.write("Please write here : ");
         String response = stdin.readLineSync()!;
         if (response == "yes") {
           opdregistration();
         }
-        print("To View the records");
-        print(usersList);
+        print("No of patients are registered now");
+        print("Enter 1 to see");
+        String check_registered_persons = stdin.readLineSync()!;
+        if (check_registered_persons == "1") {
+          int mapcount = usersList.where((e) => e == Map).length;
+          print("Total number of Patients are registered now:  $mapcount");
+        }
       } else {
         print("welcome user");
         print("You are login Succesfully");
